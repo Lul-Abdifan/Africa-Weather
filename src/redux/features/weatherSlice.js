@@ -21,7 +21,7 @@ export const forecastWeatherData = createAsyncThunk(
   }
 );
 
-// Create the weather slice
+
 const weatherSlice = createSlice({
   name: "weather",
   initialState: {
@@ -38,7 +38,7 @@ const weatherSlice = createSlice({
       })
       .addCase(fetchCountryData.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.data = action.payload; // 
+        state.data = action.payload;
       })
       .addCase(fetchCountryData.rejected, (state, action) => {
         state.status = "failed";
@@ -49,7 +49,7 @@ const weatherSlice = createSlice({
       })
       .addCase(forecastWeatherData.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.forecast = action.payload; // Assign the fetched weather data array to the state
+        state.forecast = action.payload; 
       })
       .addCase(forecastWeatherData.rejected, (state, action) => {
         state.status = "failed";
@@ -58,6 +58,5 @@ const weatherSlice = createSlice({
   },
 });
 
-// Export the reducer and actions
 export default weatherSlice.reducer;
-// export const {} = weatherSlice.actions;
+
