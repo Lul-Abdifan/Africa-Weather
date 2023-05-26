@@ -48,11 +48,11 @@ function CountryDetail() {
           <div>
             <ul className="flex justify-between p-2 bg-[rgb(4, 59, 57)] text-white">
               <li>
-                {/* <button
+                <button
                   className="text-white"
                   type="button"
                   onClick={handleGoBack}
-                > */}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -118,7 +118,7 @@ function CountryDetail() {
       </div>
       <h1 className="text-white px-10 py-2 forecast">Daily Forecasting</h1>
       <div>
-        {forecastList.slice(0, 7).map((item, index) => (
+        {/* {forecastList.slice(0, 7).map((item, index) => (
           <div
             className={`py-6 flex items-center justify-between ${
               index % 2 === 1 ? 'bg-blue' : 'bg-blueblack'
@@ -136,7 +136,7 @@ function CountryDetail() {
               />
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
