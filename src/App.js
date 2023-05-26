@@ -1,10 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import CountryList from './components/Country';
+import CountryDetail from './components/CountryDetail';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-xl">Hello Capstone</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<CountryList />} />
+          <Route path="/Africa/:capital" element={<CountryDetail />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
