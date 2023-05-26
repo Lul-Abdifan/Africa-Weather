@@ -7,12 +7,12 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \R2 Capstone\] ](#-R2 Capstone-)
+- [📖 \Weather Forecaster\] ](#-https://weather-forecaster-uok3.onrender.com/-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-    - [**R2 Capstone**](#live-demo)
+  - [🚀 Weather Forecaster](#-https://weather-forecaster-uok3.onrender.com/-)
+    - [**Weather Forecaster**](#https://weather-forecaster-uok3.onrender.com/)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -61,7 +61,11 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-### **R2 Capstone](Coming Soon)**
+### **Weather on Render](https://weather-forecaster-uok3.onrender.com/)**
+### **Weather on Netlify](https://superlative-platypus-ae4e29.netlify.app/)**
+### **Weather on Github Page](https://lul-abdifan.github.io/Africa-Weather/)**
+
+https://lul-abdifan.github.io/Africa-Weather/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
