@@ -7,15 +7,15 @@ import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { forecastWeatherData } from '../redux/features/weatherSlice';
 import Loading from './Loading';
 
-// const WEEK_DAYS = [
-//   'Monday',
-//   'Tuesday',
-//   'Wednesday',
-//   'Thursday',
-//   'Friday',
-//   'Saturday',
-//   'Sunday',
-// ];
+const WEEK_DAYS = [
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+];
 
 function CountryDetail() {
   const dayInAWeek = new Date().getDay();
@@ -32,8 +32,8 @@ function CountryDetail() {
     dispatch(forecastWeatherData(capital));
   }, [dispatch, capital]);
 
-  if (status === 'loading') return <Loading />;
-  if (error) return <h1 className="text-white font-bold text-2xl text-center pt-16">{error}</h1>;
+  // if (status === 'loading') return <Loading />;
+  // if (error) return <h1 className="text-white font-bold text-2xl text-center pt-16">{error}</h1>;
 
   const forecastList = forecast?.list ?? [];
 
