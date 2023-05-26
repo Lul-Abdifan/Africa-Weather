@@ -7,11 +7,11 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \Weather Forecaster\] ](#-https://weather-forecaster-uok3.onrender.com/-)
+- [📖 Description] 
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Weather Forecaster](#-https://weather-forecaster-uok3.onrender.com/-)
+  - [🚀 Live Demo](#-https://weather-forecaster-uok3.onrender.com/-)
     - [**Weather Forecaster**](#https://weather-forecaster-uok3.onrender.com/)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -29,9 +29,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [R2 Capstone] <a name="about-project"></a>
+# 📖 [Weather Forecaster] <a name="about-project"></a>
 
-**[R2 Capstone](coming soon)**Coming Soon
+The Weather Forecaster is a user-friendly app that displays countries with their population sizes. When a country is selected, it shows the seven-day weather forecast for its capital city. It provides accurate and up-to-date weather information for travelers and anyone interested in exploring global weather patterns.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -61,11 +61,10 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-### **Weather on Render](https://weather-forecaster-uok3.onrender.com/)**
-### **Weather on Netlify](https://superlative-platypus-ae4e29.netlify.app/)**
-### **Weather on Github Page](https://lul-abdifan.github.io/Africa-Weather/)**
+ **[Weather on Render](https://weather-forecaster-uok3.onrender.com/)**<br>
+ **[Weather on Netlify](https://superlative-platypus-ae4e29.netlify.app/)**<br>
+ **[Weather on Github Page](https://lul-abdifan.github.io/Africa-Weather/)**<br>
 
-https://lul-abdifan.github.io/Africa-Weather/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
