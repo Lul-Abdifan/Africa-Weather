@@ -11,14 +11,14 @@ const CountryList = () => {
     dispatch(fetchCountryData());
   }, [dispatch]);
   const { data, status, error } = useSelector((state) => state.weather);
-  if (status === 'loading') return <Loading />;
-  if (error) {
-    return (
-      <h1 className="text-white font-bold text-2xl text-center pt-16">
-        {error}
-      </h1>
-    );
-  }
+  // if (status === 'loading') return <Loading />;
+  // if (error) {
+  //   return (
+  //     <h1 className="text-white font-bold text-2xl text-center pt-16">
+  //       {error}
+  //     </h1>
+  //   );
+  // }
 
   return (
     <div>
