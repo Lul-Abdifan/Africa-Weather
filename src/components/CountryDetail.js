@@ -32,8 +32,8 @@ function CountryDetail() {
     dispatch(forecastWeatherData(capital));
   }, [dispatch, capital]);
 
-  // if (status === 'loading') return <Loading />;
-  // if (error) return <h1 className="text-white font-bold text-2xl text-center pt-16">{error}</h1>;
+  if (status === 'loading') return <Loading />;
+  if (error) return <h1 className="text-white font-bold text-2xl text-center pt-16">{error}</h1>;
 
   const forecastList = forecast?.list ?? [];
 
@@ -48,11 +48,11 @@ function CountryDetail() {
           <div>
             <ul className="flex justify-between p-2 bg-[rgb(4, 59, 57)] text-white">
               <li>
-                <button
+                {/* <button
                   className="text-white"
                   type="button"
                   onClick={handleGoBack}
-                >
+                > */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
