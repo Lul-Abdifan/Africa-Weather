@@ -11,20 +11,20 @@ const CountryList = () => {
     dispatch(fetchCountryData());
   }, [dispatch]);
   const { data, status, error } = useSelector((state) => state.weather);
-  // if (status === 'loading') return <Loading />;
-  // if (error) {
-  //   return (
-  //     <h1 className="text-white font-bold text-2xl text-center pt-16">
-  //       {error}
-  //     </h1>
-  //   );
-  // }
+  if (status === 'loading') return <Loading />;
+  if (error) {
+    return (
+      // <h1 className="text-white font-bold text-2xl text-center pt-16">
+        {error}
+      </h1>
+    );
+  }
 
   return (
     <div>
       <div>
         <div>
-          <ul className="flex justify-between p-2 bg-[rgb(4, 59, 57)] text-white">
+          {/* <ul className="flex justify-between p-2 bg-[rgb(4, 59, 57)] text-white"> */}
             <li className="text-white text-xl">Weather in Africa</li>
             <li className="text-white text-xl ">MAMA AFRICA</li>
             <li className="flex gap-2">
