@@ -81,7 +81,7 @@ const CountryList = () => {
             </option>
           </select>
         </h1>
-        {/* <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row"> */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row">
           {data.map((item, index) => (
             <WeatherList item={item} index={index} key={item.name.common} />
           ))}
