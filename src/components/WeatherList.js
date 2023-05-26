@@ -5,7 +5,7 @@ import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const WeatherList = ({ item, index }) => (
-  <Link to={`/Africa/${item.capital}`}>
+  // <Link to={`/Africa/${item.capital}`}>
     <div
       key={item.name.common}
       className={`top-0 left-0 w-full h-full object-cover ${
@@ -27,18 +27,18 @@ const WeatherList = ({ item, index }) => (
     </div>
   </Link>
 );
-// WeatherList.propTypes = {
-//   item: PropTypes.shape({
-//     name: PropTypes.shape({
-//       common: PropTypes.string.isRequired,
-//     }).isRequired,
-//     flags: PropTypes.shape({
-//       png: PropTypes.string.isRequired,
-//     }).isRequired,
-//     population: PropTypes.number.isRequired,
-//     capital: PropTypes.string.isRequired,
-//   }).isRequired,
-//   index: PropTypes.number.isRequired,
-// };
+WeatherList.propTypes = {
+  item: PropTypes.shape({
+    name: PropTypes.shape({
+      common: PropTypes.string.isRequired,
+    }).isRequired,
+    flags: PropTypes.shape({
+      png: PropTypes.string.isRequired,
+    }).isRequired,
+    population: PropTypes.number.isRequired,
+    capital: PropTypes.string.isRequired,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+};
 
 export default WeatherList;
