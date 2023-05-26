@@ -14,7 +14,7 @@ const CountryList = () => {
   if (status === 'loading') return <Loading />;
   if (error) {
     return (
-      // <h1 className="text-white font-bold text-2xl text-center pt-16">
+      <h1 className="text-white font-bold text-2xl text-center pt-16">
         {error}
       </h1>
     );
@@ -24,7 +24,7 @@ const CountryList = () => {
     <div>
       <div>
         <div>
-          {/* <ul className="flex justify-between p-2 bg-[rgb(4, 59, 57)] text-white"> */}
+          <ul className="flex justify-between p-2 bg-[rgb(4, 59, 57)] text-white">
             <li className="text-white text-xl">Weather in Africa</li>
             <li className="text-white text-xl ">MAMA AFRICA</li>
             <li className="flex gap-2">
@@ -81,7 +81,7 @@ const CountryList = () => {
             </option>
           </select>
         </h1>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row">
+        {/* <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row"> */}
           {data.map((item, index) => (
             <WeatherList item={item} index={index} key={item.name.common} />
           ))}
