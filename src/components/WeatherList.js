@@ -5,7 +5,7 @@ import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const WeatherList = ({ item, index }) => (
-  // <Link to={`/Africa/${item.capital}`}>
+  <Link to={`/Africa/${item.capital}`}>
     <div
       key={item.name.common}
       className={`top-0 left-0 w-full h-full object-cover ${
