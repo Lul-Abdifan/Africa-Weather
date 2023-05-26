@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+// import { v4 as uuidv4 } from 'uuid';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { forecastWeatherData } from '../redux/features/weatherSlice';
 import Loading from './Loading';
 
