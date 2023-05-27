@@ -71,15 +71,7 @@ const CountryList = () => {
       <div>
         <h1 className="w-full text-white px-10 py-2 forecast">
           Africa Country
-          {' '}
-          <select className="bg-blue ml-2 border rounded-md outline-none">
-            <option
-              value="option1"
-              className="bg-blue border border-blue  text-blue"
-            >
-              All
-            </option>
-          </select>
+
         </h1>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row">
           {data.map((item, index) => (
