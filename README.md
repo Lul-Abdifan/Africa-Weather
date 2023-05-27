@@ -68,6 +68,17 @@ The Weather Forecaster is a user-friendly app that displays countries with their
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+ 🚀  <a name="Presentation">Presentation</a>
+
+ **[Loom](https://www.loom.com/share/950bf6dba55c4e31a1835e46f151c168)**<br>
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -219,8 +230,8 @@ If you like this project, kindly drop a star for me.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to use this medium to appreciate Microverse that bringing me The best platform ever for me.
-I would like to use this medium to appreciate [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for giving the original design idea 
+I would like to use this medium to appreciate Microverse that bringing me The best platform ever for me.<br>
+I would like to use this medium to appreciate [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for giving the original design idea <br>
 I would like to use this medium to appreciate [Weather forecast group](https://openweathermap.org/api) and Africa Data
 
 
