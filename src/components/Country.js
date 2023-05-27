@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCountryData } from '../redux/features/weatherSlice';
 import WeatherList from './WeatherList';
@@ -7,10 +7,16 @@ import Loading from './Loading';
 
 const CountryList = () => {
   const dispatch = useDispatch();
+  const { data, status, error } = useSelector((state) => state.weather);
+  const [searchQuery, setSearchQuery] = useState('');
+
   useEffect(() => {
     dispatch(fetchCountryData());
   }, [dispatch]);
-  const { data, status, error } = useSelector((state) => state.weather);
+
+  const filteredData = data.filter((item) => item.name.common.toLowerCase()
+    .startsWith(searchQuery.toLowerCase()));
+
   if (status === 'loading') return <Loading />;
   if (error) {
     return (
@@ -71,10 +77,18 @@ const CountryList = () => {
       <div>
         <h1 className="w-full text-white px-10 py-2 forecast">
           Africa Country
-
+          <div className="flex items-center p-2 bg-[rgb(4, 59, 57)] text-white">
+            <input
+              type="text"
+              placeholder="Search by country name"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="px-3 py-2 rounded-md bg-white text-gray-800 focus:outline-none"
+            />
+          </div>
         </h1>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-flow-row">
-          {data.map((item, index) => (
+          {filteredData.map((item, index) => (
             <WeatherList item={item} index={index} key={item.name.common} />
           ))}
         </div>
