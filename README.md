@@ -154,6 +154,17 @@ To run tests, run the following command:
 Run "npx hint ."
 Run "npx stylelint "**/*.{css,scss} --fix " to fix linters
 Run "npx eslint . --fix to fix linters"
+
+```
+
+### Jest tests <a name="Jest-tests"></a>
+
+To run tests, run the following command:
+
+```sh
+Install necessary packages and library
+Run npm test
+
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -209,6 +220,10 @@ If you like this project, kindly drop a star for me.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to use this medium to appreciate Microverse that bringing me The best platform ever for me.
+I would like to use this medium to appreciate [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for giving the original design idea 
+I would like to use this medium to appreciate [Weather forecast group](https://openweathermap.org/api) and Africa Data
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
