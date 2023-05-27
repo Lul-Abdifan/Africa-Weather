@@ -1,39 +1,40 @@
-import { Provider } from "react-redux";
-import configureStore from "redux-mock-store";
-import { render, screen } from "@testing-library/react";
-import WeatherList from "../components/WeatherList";
-import { MemoryRouter } from "react-router-dom";
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import WeatherList from '../components/WeatherList';
 import '@testing-library/jest-dom/extend-expect';
-describe("Country Weather List render", () => {
+
+describe('Country Weather List render', () => {
   const mockStore = configureStore();
   const newState = {
-    data: [{ country: "Ethiopia", population: 120000000 }],
-    forecast: "",
-    status: "idle",
+    data: [{ country: 'Ethiopia', population: 120000000 }],
+    forecast: '',
+    status: 'idle',
     error: null,
   };
 
-  test("should return the correct state", () => {
+  test('should return the correct state', () => {
     const countryListStore = mockStore(newState);
     countryListStore.dispatch({
-      type: "fetch/CountryData",
+      type: 'fetch/CountryData',
       payload: { taker: newState },
     });
     expect(countryListStore.getState()).toEqual(newState);
   });
 
-  test("should render the home page with the correct data", () => {
+  test('should render the home page with the correct data', () => {
     // Arrange
     const newState = {
       data: [
         {
-          name: { common: "Ethiopia" },
+          name: { common: 'Ethiopia' },
           population: 120000000,
-          capital: "Addis Ababa",
+          capital: 'Addis Ababa',
         },
       ],
-      forecast: "",
-      status: "idle",
+      forecast: '',
+      status: 'idle',
       error: null,
     };
 
@@ -46,10 +47,10 @@ describe("Country Weather List render", () => {
           <WeatherList
             item={countryListStore.getState().data[0]}
             index={0}
-            
+
           />
         </MemoryRouter>
-      </Provider>
+      </Provider>,
     );
 
     // Assert

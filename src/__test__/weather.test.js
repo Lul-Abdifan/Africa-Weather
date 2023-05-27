@@ -5,7 +5,7 @@ describe('Initial state', () => {
     const state = weatherReducer(undefined, {});
     expect(state).toEqual(initialState);
   });
-  test("Initial state", () => {
+  test('Initial state', () => {
     expect(initialState).toEqual({
       data: [],
       forecast: '',
@@ -16,6 +16,3 @@ describe('Initial state', () => {
 });
 
 // Run the tests
-
-
-

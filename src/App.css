@@ -1,14 +1,16 @@
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
 }
+
 .App {
   text-align: center;
 }
-body{
+
+body {
   background-color: #0a5e96;
 }
-.forecast{
-  background-color:  #0a4c79
-}
 
+.forecast {
+  background-color: #0a4c79;
+}
