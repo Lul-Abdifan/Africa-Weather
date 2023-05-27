@@ -1,26 +1,26 @@
-import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { forecastWeatherData } from '../redux/features/weatherSlice';
-import Loading from './Loading';
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { forecastWeatherData } from "../redux/features/weatherSlice";
+import Loading from "./Loading";
 
 const WEEK_DAYS = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
 ];
 
-function CountryDetail() {
+export const CountryDetail = () => {
   const dayInAWeek = new Date().getDay();
   const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
-    WEEK_DAYS.slice(0, dayInAWeek),
+    WEEK_DAYS.slice(0, dayInAWeek)
   );
   const forecast = useSelector((state) => state.weather.forecast);
   const { status, error } = useSelector((state) => state.weather);
@@ -32,13 +32,18 @@ function CountryDetail() {
     dispatch(forecastWeatherData(capital));
   }, [dispatch, capital]);
 
-  if (status === 'loading') return <Loading />;
-  if (error) return <h1 className="text-white font-bold text-2xl text-center pt-16">{error}</h1>;
+  if (status === "loading") return <Loading />;
+  if (error)
+    return (
+      <h1 className="text-white font-bold text-2xl text-center pt-16">
+        {error}
+      </h1>
+    );
 
   const forecastList = forecast?.list ?? [];
 
   const handleGoBack = () => {
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -69,9 +74,7 @@ function CountryDetail() {
                   </svg>
                 </button>
               </li>
-              <li>
-                {`Weather in ${capital}`}
-              </li>
+              <li>{`Weather in ${capital}`}</li>
               <li className="flex gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -121,14 +124,18 @@ function CountryDetail() {
         {forecastList.slice(0, 7).map((item, index) => (
           <div
             className={`py-6 flex items-center justify-between ${
-              index % 2 === 1 ? 'bg-blue' : 'bg-blueblack'
+              index % 2 === 1 ? "bg-blue" : "bg-blueblack"
             }`}
             key={uuidv4()}
           >
-            <div className="mx-6 w-3/4 text-white font-lato text-xl">{forecastDays[index]}</div>
+            <div className="mx-6 w-3/4 text-white font-lato text-xl">
+              {forecastDays[index]}
+            </div>
 
             <div className="w-2/4 flex items-center justify-between">
-              <div className="text-white font-lato text-xl">{item.weather[0].description}</div>
+              <div className="text-white font-lato text-xl">
+                {item.weather[0].description}
+              </div>
 
               <FontAwesomeIcon
                 icon={faArrowAltCircleRight}
@@ -140,6 +147,6 @@ function CountryDetail() {
       </div>
     </div>
   );
-}
+};
 
 export default CountryDetail;

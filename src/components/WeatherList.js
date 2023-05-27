@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const WeatherList = ({ item, index }) => (
   <Link to={`/Africa/${item.capital}`}>
     <div
       key={item.name.common}
       className={`top-0 left-0 w-full h-full object-cover ${
-        (index % 4 === 0 || index % 4 === 3) ? 'bg-blue' : 'bg-purple'
+        index % 4 === 0 || index % 4 === 3 ? "bg-blue" : "bg-purple"
       }`}
     >
       <div className="flex flex-col space-y-20 py-2 pr-2">
@@ -32,9 +32,7 @@ WeatherList.propTypes = {
     name: PropTypes.shape({
       common: PropTypes.string.isRequired,
     }).isRequired,
-    flags: PropTypes.shape({
-      png: PropTypes.string.isRequired,
-    }).isRequired,
+
     population: PropTypes.number.isRequired,
     capital: PropTypes.string.isRequired,
   }).isRequired,

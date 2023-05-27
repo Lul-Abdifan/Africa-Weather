@@ -20,15 +20,15 @@ export const forecastWeatherData = createAsyncThunk(
     return forecastResponse.data;
   },
 );
-
+export const initialState = {
+  data: [],
+  forecast: '',
+  status: 'idle',
+  error: null,
+};
 const weatherSlice = createSlice({
   name: 'weather',
-  initialState: {
-    data: [],
-    forecast: '',
-    status: 'idle',
-    error: null,
-  },
+  initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
